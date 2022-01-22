@@ -20,6 +20,7 @@ sqsum 3;
 
 (* question 3 *)
 
+(* helper function *)
 fun maxhelper ([], max:int) = max
 	| maxhelper (head::tail, max:int) = 
 			if head > max then maxhelper (tail, head)
