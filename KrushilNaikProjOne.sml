@@ -4,9 +4,9 @@
 fun cube n:int =
 	n*n*n;
 
-cube(2);
-cube(3);
-cube(4);
+(* cube(2); *)
+(* cube(3); *)
+(* cube(4); *)
 
 (* question 2 *)
 
@@ -14,9 +14,9 @@ cube(4);
 fun sqsum x:int =
 	x * (x + 1) * (2*x + 1) div 6;
 
-sqsum 1;
-sqsum 2;
-sqsum 3;
+(* sqsum 1; *)
+(* sqsum 2; *)
+(* sqsum 3; *)
 
 (* question 3 *)
 
@@ -29,6 +29,6 @@ fun maxhelper ([], max:int) = max
 (* find max value of a list *)
 fun max x = maxhelper (tl x, hd x);
 
-max([1,2,3]);
-max([1,3,2]);
-max([2,2,2]);
+(* max([1,2,3]); *)
+(* max([1,3,2]); *)
+(* max([2,2,2]); *)
