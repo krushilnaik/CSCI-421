@@ -12,6 +12,7 @@ fun cube n:int =
 
 (* find sum of all squares from 0 to n, inclusive *)
 fun sqsum x:int =
+	(* this is a mathematical simplification I found on Google *)
 	x * (x + 1) * (2*x + 1) div 6;
 
 (* sqsum 1; *)
@@ -21,10 +22,14 @@ fun sqsum x:int =
 (* question 3 *)
 
 (* helper function *)
-fun maxhelper ([], max:int) = max
-	| maxhelper (head::tail, max:int) = 
-			if head > max then maxhelper (tail, head)
-			else maxhelper (tail, max);
+(* if the first argument is an empty list, return 'max' *)
+fun maxhelper ([], a:int) = a
+	(* else split up the input array between the head and tail *)
+	| maxhelper (first::rest, a:int) = 
+			(* if 'first' is greater than the running max, we have a new max *)
+			if first > a then maxhelper (rest, first)
+			(* else throw it away and keep looking *)
+			else maxhelper (rest, a);
 
 (* find max value of a list *)
 fun max x = maxhelper (tl x, hd x);
