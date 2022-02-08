@@ -24,7 +24,7 @@ fun sqsum x:int =
 (* helper function *)
 (* if the first argument is an empty list, return 'max' *)
 fun maxhelper ([], a:int) = a
-	(* else split up the input array between the head and tail *)
+	(* else split up the the head and tail of the input array *)
 	| maxhelper (first::rest, a:int) = 
 			(* if 'first' is greater than the running max, we have a new max *)
 			if first > a then maxhelper (rest, first)
