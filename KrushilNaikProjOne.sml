@@ -12,7 +12,7 @@ cube(4);
 
 (* find sum of all squares from 0 to n, inclusive *)
 fun sqsum x:int =
-	(* this is a mathematical simplification I found on Google *)
+	(* this is a mathematical formula I found on Google *)
 	x * (x + 1) * (2*x + 1) div 6;
 
 sqsum 1;
