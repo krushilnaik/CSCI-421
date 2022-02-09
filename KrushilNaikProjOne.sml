@@ -33,7 +33,7 @@ fun maxhelper ([], a:int) = a
 			else maxhelper (rest, a);
 
 (* find max value of a list *)
-(* doesn't work if initially empty, but we were told not to worry about that *)
+(* doesn't work if empty but we were told not to worry about that *)
 fun max x = maxhelper (tl x, hd x);
 
 max([1,2,3]);
