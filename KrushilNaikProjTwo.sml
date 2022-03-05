@@ -1,3 +1,7 @@
+(* h_zeng defined partition, quickSort, and newQuickSort seperately *)
+(* That's not how mergesort on page 114 was written *)
+(* In the textbook, all the helper functions were locally scoped *)
+(* I decided to follow the instructions instead of the screenshot *)
 fun quickSort nil = nil
 	| quickSort [e] = [e]
 	| quickSort (head::tail) =
