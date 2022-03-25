@@ -1,12 +1,10 @@
 (* Problem 1 *)
-
 fun mymap1 f l = foldr(fn (x, acc) => (f x)::acc) [] l;
 
 mymap1 (fn x => x+1) [1, 2, 3, 4];
 
 
 (* Problem 2 *)
-
 fun mymap2 f nil = nil
 	| mymap2 f (head::tail) = (f head)::(mymap2 f tail);
 
